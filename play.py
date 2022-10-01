@@ -1,5 +1,4 @@
 # Imports
-from bdb import effective
 import pygame
 
 # Own classes
@@ -24,9 +23,6 @@ def mainMenu():
     
     # Display title
     screen.blit(bigText.render("simple game.", True, white) , (425,200))
-
-    playT = smallText.render("play." , True , white) # Play button text
-    infoT = smallText.render("info.", True, white) # Info button text
 
     gaming = True
 
