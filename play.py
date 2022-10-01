@@ -5,6 +5,7 @@ import pygame
 # Own classes
 import level1
 import info
+import test
 
 def mainMenu():
     pygame.init()
@@ -35,14 +36,14 @@ def mainMenu():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 gaming = False # Terminate program
-                
             
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if mouseInPlayDomain:
-                    pygame.quit()
+                    level1.play() # Opens level 1
+                    gaming = False # Quits pygame when level1.play() ends
                 elif mouseInInfoDomain:
-                    pygame.quit()
-
+                    info.show() # Opens info
+                    gaming = False() # Quits pygame when info.show() ends
 
         mouse = pygame.mouse.get_pos()
 
